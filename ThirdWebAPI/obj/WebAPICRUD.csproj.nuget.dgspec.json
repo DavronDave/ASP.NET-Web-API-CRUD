@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\davro\\Desktop\\ASP.NET CORE\\ThirdWebAPI\\ThirdWebAPI\\WebAPICRUD.csproj": {}
+    "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davro\\Desktop\\ASP.NET CORE\\ThirdWebAPI\\ThirdWebAPI\\WebAPICRUD.csproj": {
+    "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davro\\Desktop\\ASP.NET CORE\\ThirdWebAPI\\ThirdWebAPI\\WebAPICRUD.csproj",
+        "projectUniqueName": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj",
         "projectName": "WebAPICRUD",
-        "projectPath": "C:\\Users\\davro\\Desktop\\ASP.NET CORE\\ThirdWebAPI\\ThirdWebAPI\\WebAPICRUD.csproj",
+        "projectPath": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj",
         "packagesPath": "C:\\Users\\davro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davro\\Desktop\\ASP.NET CORE\\ThirdWebAPI\\ThirdWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.17, )"

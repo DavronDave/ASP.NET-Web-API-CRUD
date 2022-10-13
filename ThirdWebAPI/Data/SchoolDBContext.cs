@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ThirdWebAPI.Models;
+using WebAPICRUD.Models;
 
 namespace ThirdWebAPI.Data
 {
@@ -11,6 +12,7 @@ namespace ThirdWebAPI.Data
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
 
     }
 }

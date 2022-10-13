@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using ThirdWebAPI.Models;
+using WebAPICRUD.Models;
 
 namespace ThirdWebAPI.Repositories
 {

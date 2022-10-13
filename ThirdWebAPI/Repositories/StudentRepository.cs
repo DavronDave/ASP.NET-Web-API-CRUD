@@ -5,6 +5,7 @@ using ThirdWebAPI.Models;
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using WebAPICRUD.Models;
 
 namespace ThirdWebAPI.Repositories
 {
@@ -18,12 +19,21 @@ namespace ThirdWebAPI.Repositories
         }
         public void CreateStudent(Student student)
         {
-            if(student == null)
-                throw new ArgumentNullException(nameof(student));
+            if (student == null)
+                throw new ArgumentNullException("Sorry");
 
-            _schoolDB.Students.Add(student);
+            _schoolDB.Add(student);
             _schoolDB.SaveChanges();
         }
+
+        //public void CreateStudent(Student student, Teacher teacher)
+        //{
+        //    if(student==null && teacher==null)
+        //        throw new ArgumentNullException(nameof(student));
+        //    _schoolDB.Students.Add(student);
+        //    _schoolDB.Teachers.Add(teacher);
+        //    _schoolDB.SaveChanges();
+        //}
 
         public async Task DeleteStudent(int id)
         {
@@ -36,9 +46,6 @@ namespace ThirdWebAPI.Repositories
 
         public async Task<Student> GetStudent(int id)
         {
-            if (id == 0)
-                throw new ArgumentNullException(nameof(id));
-
             return await _schoolDB.Students.FirstOrDefaultAsync(s => s.Id == id);
         }
 

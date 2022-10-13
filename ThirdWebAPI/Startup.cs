@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ThirdWebAPI.Data;
 using ThirdWebAPI.Repositories;
+using WebAPICRUD.Repositories;
 
 namespace ThirdWebAPI
 {
@@ -40,6 +41,7 @@ namespace ThirdWebAPI
             option.UseSqlServer(Configuration.GetConnectionString("SchoolDatabase")));
 
             services.AddScoped<IStudentRepository, StudentRepository>();
+            services.AddScoped<ITeacherRepository, TeacherRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

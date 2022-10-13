@@ -25,6 +25,16 @@ namespace ThirdWebAPI.Controllers
             return Ok(_repository.GetStudents().GetAwaiter().GetResult());
         }
 
+        [HttpGet("{id}")]
+        [ProducesResponseType(200, Type = typeof(Student))]
+        public IActionResult GetStudet(int id)
+        {
+            var student = _repository.GetStudent(id).GetAwaiter().GetResult();
+            if(student == null)
+                return NotFound();
+            return Ok(student);
+        }
+
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(Student))]
         public IActionResult CreateStudent(Student student)
