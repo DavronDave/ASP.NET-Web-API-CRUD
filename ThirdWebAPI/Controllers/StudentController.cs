@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using ThirdWebAPI.Models;
 using ThirdWebAPI.Repositories;
-using WebAPICRUD.DTOs;
+using WebAPICRUD.DTOs.Student;
 
 namespace ThirdWebAPI.Controllers
 {
@@ -27,7 +27,7 @@ namespace ThirdWebAPI.Controllers
         public IActionResult GetAllStudets()
         {
             var students = _repository.GetStudents().GetAwaiter().GetResult();
-            var mapStudents=_mapper.Map<IEnumerable<StudentReadDto>>(students);
+            var mapStudents = _mapper.Map<IEnumerable<StudentReadDto>>(students);
             return Ok(mapStudents);
         }
 
@@ -48,7 +48,8 @@ namespace ThirdWebAPI.Controllers
         {
             var mapped = _mapper.Map<Student>(student);
             await _repository.CreateStudent(mapped);
-            return Created("",student);
+            return CreatedAtAction("GetStudet", new {id=student.Id},student);
+            // return GetStudet(student.Id);  => this is equal above return type
         }
 
         [HttpDelete("{id}")]
@@ -68,8 +69,9 @@ namespace ThirdWebAPI.Controllers
             if (studentFromRepo == null)
                 return NotFound();
 
-            _mapper.Map(student, studentFromRepo);
-            return Ok();
+            var mapper = _mapper.Map(student, studentFromRepo);
+            await _repository.UpdateSTudent(id, mapper);
+            return Ok(mapper);
         }
     }
 }

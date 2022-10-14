@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ThirdWebAPI.Models;
-using WebAPICRUD.DTOs;
+using WebAPICRUD.DTOs.Student;
 
 namespace WebAPICRUD.Profiles
 {

@@ -6,7 +6,7 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using WebAPICRUD.Models;
-using WebAPICRUD.DTOs;
+using WebAPICRUD.DTOs.Student;
 
 namespace ThirdWebAPI.Repositories
 {
@@ -57,7 +57,7 @@ namespace ThirdWebAPI.Repositories
             return await _schoolDB.Students.ToListAsync();
         }
 
-        public Task UpdateSTudent(int id, StudentUpdateDto student)
+        public Task UpdateSTudent(int id, Student student)
         {
             var studentId = _schoolDB.Students.Find(id);
             if(studentId != null)
