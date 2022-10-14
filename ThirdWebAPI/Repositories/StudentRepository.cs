@@ -6,6 +6,7 @@ using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using WebAPICRUD.Models;
+using WebAPICRUD.DTOs;
 
 namespace ThirdWebAPI.Repositories
 {
@@ -17,13 +18,13 @@ namespace ThirdWebAPI.Repositories
         {
             _schoolDB = schoolDB;
         }
-        public void CreateStudent(Student student)
+        public async Task CreateStudent(Student student)
         {
             if (student == null)
                 throw new ArgumentNullException("Sorry");
 
-            _schoolDB.Add(student);
-            _schoolDB.SaveChanges();
+            await _schoolDB.AddAsync(student);
+            await _schoolDB.SaveChangesAsync();
         }
 
         //public void CreateStudent(Student student, Teacher teacher)
@@ -56,7 +57,7 @@ namespace ThirdWebAPI.Repositories
             return await _schoolDB.Students.ToListAsync();
         }
 
-        public Task UpdateSTudent(int id, Student student)
+        public Task UpdateSTudent(int id, StudentUpdateDto student)
         {
             var studentId = _schoolDB.Students.Find(id);
             if(studentId != null)
