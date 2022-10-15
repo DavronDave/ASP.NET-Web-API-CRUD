@@ -23,7 +23,7 @@ namespace WebAPICRUD.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(200,Type = typeof(IEnumerable<TeacherReadDto>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<TeacherReadDto>))]
         public async Task<IActionResult> GetAllTeachers()
         {
             var teachers = await _repository.GetAllTeachers();
@@ -35,15 +35,27 @@ namespace WebAPICRUD.Controllers
         [ProducesResponseType(200, Type = typeof(TeacherReadDto))]
         public async Task<IActionResult> GetStudentById(int id)
         {
-            var teacherId = await _repository.GetTeacherById(id);           
+            var teacherId = await _repository.GetTeacherById(id);
             if (teacherId == null)
                 return NotFound();
             var mapped = _mapper.Map<TeacherReadDto>(teacherId);
             return Ok(mapped);
         }
 
+        [HttpGet("{name}")]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<TeacherReadDto>))]
+        public async Task<IActionResult> GetTeachersByName(string name)
+        {
+            var teachers =await _repository.GetTeacherByName(name);
+            if (teachers == null)
+                return NotFound();
+
+            var mappedTeacher = _mapper.Map<IEnumerable<TeacherReadDto>>(teachers);
+            return Ok(mappedTeacher);
+        }
+
         [HttpPost]
-        [ProducesResponseType(200,Type =typeof(TeacherCreateDto))]
+        [ProducesResponseType(200, Type = typeof(TeacherCreateDto))]
         public async Task<IActionResult> CreateTeacher(TeacherCreateDto teacher)
         {
             var mapped = _mapper.Map<Teacher>(teacher);
@@ -65,7 +77,7 @@ namespace WebAPICRUD.Controllers
             if (teacher == null)
                 return NotFound(teacher);
 
-            var mapped = _mapper.Map(teacherDto,teacher);
+            var mapped = _mapper.Map(teacherDto, teacher);
             await _repository.UpdateTeacher(id, mapped);
             return Ok(mapped);
         }

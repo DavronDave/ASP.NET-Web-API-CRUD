@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj": {}
+    "C:\\Users\\davro\\Source\\Repos\\ASP.NET-Web-API-CRUD\\ThirdWebAPI\\WebAPICRUD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj": {
+    "C:\\Users\\davro\\Source\\Repos\\ASP.NET-Web-API-CRUD\\ThirdWebAPI\\WebAPICRUD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj",
+        "projectUniqueName": "C:\\Users\\davro\\Source\\Repos\\ASP.NET-Web-API-CRUD\\ThirdWebAPI\\WebAPICRUD.csproj",
         "projectName": "WebAPICRUD",
-        "projectPath": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj",
+        "projectPath": "C:\\Users\\davro\\Source\\Repos\\ASP.NET-Web-API-CRUD\\ThirdWebAPI\\WebAPICRUD.csproj",
         "packagesPath": "C:\\Users\\davro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\obj\\",
+        "outputPath": "C:\\Users\\davro\\Source\\Repos\\ASP.NET-Web-API-CRUD\\ThirdWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

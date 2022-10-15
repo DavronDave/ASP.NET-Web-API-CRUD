@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4dRbxltijF5Xwig/MqZMxrZGkT6aN0a5ousgyLNNmH8x1C2ORMzaP7/+wyHEPCCg1kAb9UxzLTrjiDkG959Z9Q==",
+  "dgSpecHash": "sMBUJS17tfFuNhgzMSeDstN2e0tA4hvflLj5F3l34DomBDqn34xf/Mv6YDOfJVyYiE6dwNNtISHw2UgthTmKYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\davro\\Desktop\\ASP.NET WEB API Cloned\\ThirdWebAPI\\WebAPICRUD.csproj",
+  "projectFilePath": "C:\\Users\\davro\\Source\\Repos\\ASP.NET-Web-API-CRUD\\ThirdWebAPI\\WebAPICRUD.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\davro\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\davro\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

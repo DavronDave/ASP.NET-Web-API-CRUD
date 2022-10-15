@@ -45,6 +45,11 @@ namespace WebAPICRUD.Repositories
                 return await _dBContext.Teachers.FirstOrDefaultAsync(t => t.Id == id);
         }
 
+        public async Task<IEnumerable<Teacher>> GetTeacherByName(string name)
+        {
+            return await _dBContext.Teachers.Where(x => x.FName == name).ToListAsync();
+        }
+
         public async Task UpdateTeacher(int id, Teacher teacher)
         {
             var teacherId = _dBContext.Teachers.Find(id);

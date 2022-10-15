@@ -42,6 +42,19 @@ namespace ThirdWebAPI.Controllers
             return Ok(studentRead);
         }
 
+        [HttpGet("{name}")]
+        [ProducesResponseType(200, Type =typeof(IEnumerable<StudentReadDto>))]
+        public async Task<IActionResult> GetStudentByName(string name)
+        {
+            var students = await _repository.GetStudentByName(name);
+            if (students == null)
+                return NotFound();
+
+            var mapped = _mapper.Map<IEnumerable<StudentReadDto>>(students);
+            return Ok(mapped);
+        }
+
+
         [HttpPost]
         [ProducesResponseType(200, Type = typeof(StudentCreateDto))]
         public async Task<IActionResult> CreateStudent(StudentCreateDto student)

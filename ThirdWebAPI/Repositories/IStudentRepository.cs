@@ -11,6 +11,7 @@ namespace ThirdWebAPI.Repositories
     {
         Task<IEnumerable<Student>> GetStudents();
         Task<Student> GetStudent(int id);
+        Task<IEnumerable<Student>> GetStudentByName(string name);
         Task DeleteStudent(int id);
         Task UpdateSTudent(int id, Student student);
         Task CreateStudent(Student student);

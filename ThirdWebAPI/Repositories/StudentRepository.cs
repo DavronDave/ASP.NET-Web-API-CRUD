@@ -50,6 +50,11 @@ namespace ThirdWebAPI.Repositories
             return await _schoolDB.Students.FirstOrDefaultAsync(s => s.Id == id);
         }
 
+        public async Task<IEnumerable<Student>> GetStudentByName(string name)
+        {
+            return await _schoolDB.Students.Where(x => x.FirstName==name).ToListAsync();
+        }
+
         public async Task<IEnumerable<Student>> GetStudents()
         {
             if (_schoolDB.Students == null)
